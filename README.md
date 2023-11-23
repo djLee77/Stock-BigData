@@ -1,6 +1,13 @@
 # 📈 Stock-Price-Prediction
 
 ## 🛤 Process 목록
+
+## ✈ prophet 모델
+
+## 🛸 학습용 clone 모델
+출처 - https://github.com/NGYB/Stocks
+
+## 🚀 최종 모델
 ### 단계 1: 데이터 로딩 및 기본 탐색
 - 라이브러리 임포트:
 ```
@@ -109,19 +116,3 @@ XGBRegressor를 사용하여 XGBoost 회귀 모델을 정의하고 훈련합니�
 RMSE는 모델의 예측 정확도를 측정하는 데 중요한 지표로 사용됩니다.
 ```
 
-## ✈ prophet 모델
-
-## 🛸 clone 모델 - XGBooster
-출처 - https://github.com/NGYB/Stocks
-
-## 🚀 최종 모델 - XGBooster
-### 1. 데이터 전처리
-라이브러리 임포트:
-
-pandas: 데이터 처리와 분석을 위한 라이브러리입니다. 이를 사용하여 데이터를 다루고 분석할 수 있습니다. yfinance: Yahoo Finance의 데이터를 쉽게 다운로드할 수 있게 해주는 라이브러리입니다. matplotlib.pyplot 및 seaborn: 이 두 라이브러리는 데이터를 시각화하는 데 사용됩니다. matplotlib은 그래프를 그리는 기본적인 도구를 제공하며, seaborn은 matplotlib을 기반으로 좀 더 향상된 시각화 기능을 제공합니다. 데이터 불러오기:
-
-yf.download: Yahoo Finance에서 주식 데이터를 다운로드합니다. 여기서는 '005930.KS' (삼성전자의 주식 코드)에 해당하는 데이터를 2018년 11월 1일부터 2023년 11월 1일까지 다운로드합니다. 기본 데이터 탐색:
-
-samsung_stock.head(): 데이터프레임의 처음 몇 행을 출력하여 데이터의 개요를 살펴봅니다. samsung_stock.dtypes: 각 컬럼의 데이터 타입을 출력합니다. samsung_stock.describe(): 수치형 컬럼들에 대한 요약 통계를 제공합니다. 이는 평균, 표준편차, 최소값, 최대값 등의 정보를 포함합니다. 종가 데이터 시각화:
-
-plt.figure: 시각화의 크기를 설정합니다. plt.plot: 삼성전자의 종가 데이터를 선 그래프로 그립니다. plt.title, plt.xlabel, plt.ylabel: 그래프의 제목과 x, y축의 레이블을 설정합니다. plt.show(): 설정한 그래프를 화면에 표시합니다.

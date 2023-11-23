@@ -184,9 +184,11 @@ KDE(Kernel Density Estimate)는 오차의 밀도 추정치를 함께 제공합�
 ![image](https://github.com/djLee77/Stock-Price-Prediction/assets/117016295/52672d3f-06eb-42c7-b87f-a863ebfa01de)
 
 ## 🛸 3. Clone-NGYB-XGBoost
-- 이 파일은 NGYB님의 `StockPricePrediction_v1c_xgboost.ipynb` 코드를 클론하였습니다.
+- `Clone-NGYB-XGBoost`는 NGYB님의 `StockPricePrediction_v1c_xgboost.ipynb` 코드를 클론하였습니다.
 - 데이터 로드 과정과 전처리 과정을 일부 수정하여 `삼성전자`의 주가 정보를 사용하도록 했습니다.
 - Repository 출처 - https://github.com/NGYB/Stocks
 
 
-### 4. 결론 및 느낀점
+### 💡 4. 결론 및 느낀점
+- 시계열 패턴을 분석하는 것만으로는 미래의 주가를 예측하는 것은 불가능했고, 유의미한 예측을 위해서는 다양한 경제 지표가 필요하다는 것을 깨달았습니다.
+- 더 적합한 모델을 찾기 위해 여러 방식을 직접 사용해보며 머신 러닝에 대한 인사이트를 얻을 수 있었습니다.

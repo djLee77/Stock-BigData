@@ -168,7 +168,7 @@ comparison_df 데이터프레임을 생성하여 실제 값(y_test)과 예측 �
 오차는 실제 값과 예측 값의 차이(Actual - Predicted)로 계산됩니다.
 ```
 
--오차 분석:
+- 오차 분석:
 ```
 오차의 평균(error_mean)과 표준편차(error_std)를 계산하여
 모델의 예측 오차에 대한 일반적인 정보를 제공합니다.
@@ -193,7 +193,41 @@ KDE(Kernel Density Estimate)는 오차의 밀도 추정치를 함께 제공합�
 
 ### 2-5. 미래 주가 예측
 
-![image](https://github.com/djLee77/Stock-Price-Prediction/assets/117016295/52672d3f-06eb-42c7-b87f-a863ebfa01de)
+<img width="667" alt="ExpectedPrice" src="https://github.com/djLee77/stock-price-prediction/assets/117016295/970f69f4-97b2-4ef5-ad83-9bea2247b342">
+
+- 데이터셋 준비:
+```
+주식의 여러 특성들(Open, High, Low, Close, Volume)을 포함하는 데이터셋을 준비하고, 종가(Close)를 예측 목표(target)로 설정합니다.
+```
+
+- 데이터 정규화:
+```
+StandardScaler를 사용해 특성 데이터를 정규화하여, 각 특성이 동일한 스케일을 갖도록 변환합니다.
+이는 모델의 학습 성능을 향상시키기 위해 필수적인 단계입니다.
+```
+
+- 모델 정의 및 훈련:
+```
+XGBRegressor로 XGBoost 회귀 모델을 정의하고, 정규화된 데이터로 모델을 훈련시킵니다.
+이 과정은 데이터에서 패턴을 학습하여 미래의 종가를 예측할 수 있게 합니다.
+```
+
+- 미래 예측을 위한 데이터 생성:
+```
+마지막 알려진 데이터를 복제하여 다음 날의 특성 데이터를 생성합니다. 여기서는 1일치 데이터만 예측합니다.
+```
+
+- 미래 데이터에 대한 주가 예측:
+```
+훈련된 모델을 사용해 생성된 미래 데이터의 주가를 예측합니다.
+```
+
+- 결과 시각화:
+```
+matplotlib 라이브러리를 이용해 결과를 시각화합니다. 과거 주가와 예측된 다음 날의 주가를 동일한 그래프에 표시합니다.
+과거 주가는 파란색 선으로, 예측된 주가는 빨간색 점선으로 나타내어 뚜렷이 구분합니다.
+x축의 범위를 xlim을 사용해 특정 기간으로 제한합니다, 여기서는 2023년 10월 1일부터 11월 1일까지입니다.
+```
 
 ## 🛸 3. Clone-NGYB-XGBoost
 - `Clone-NGYB-XGBoost`는 NGYB님의 `StockPricePrediction_v1c_xgboost.ipynb` 코드를 클론하였습니다.
